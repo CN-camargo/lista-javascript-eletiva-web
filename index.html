@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Exercícios JavaScript</h1>
+    </header>
+    <main>
+        <!-- Exercício 1-->
+        <section class="exercicio">
+            <h2>Exercício 1 - Identificar tipo de Dado</h2>
+            <p>Crie uma função chamada tipoDeDado que receba um valor e retorne uma string indicando o tipo do dado.</p>
+            <p><b>Desafio adicional:</b> Inclua casos para arrays e objetos.</p>
+            
+            <p>
+                <label for="algo">Digite algo:</label>
+                <input type="text" id="algo" name="algo">
+            </p>
+
+            <p>Resultado: <span id="resultado-exerc01"></span></p>
+
+            <button onclick="tipoDeDado(document.getElementById('algo').value.trim())">Executar tipoDeDado</button>
+        </section>
+
+        <!-- Exercício 2-->
+        <section class="exercicio">
+            <h2>Exercício 2 - Maior de Idade</h2>
+            <p>Escreva uma função chamada maiorDeIdade que receba uma idade e retorne true se a pessoa for maior de idade (18 anos ou mais) e false caso contrário.</p>
+            <p><b>Desafio adicional:</b> Adicione mensagens personalizadas para diferentes faixas etárias.</p>
+
+            <p>
+                <label for="idade">Digite sua idade:</label>
+                <input type="number" id="idade" name="idade">
+            </p>
+
+            <p>Resultado: <span id="resultado-exerc02"></span></p>
+            
+            <button onclick="maiorDeIdade(document.getElementById('idade').value)">Executar maiorDeIdade</button>
+        </section>
+
+        <!-- Exercício 3-->
+        <section class="exercicio">
+            <h2>Exercício 3 - Tabuada</h2>
+            <p>Crie uma função chamada tabuada que receba um número e retorne a tabuada desse número até 10.</p>
+            <p><b>Desafio adicional: </b>Faça com que a função também aceite um parâmetro para o número máximo da tabuada.</p>
+            <p>
+                <label for="numero">Digite um número:</label>
+                <input type="number" id="numero" name="numero">
+            </p>
+            <p>
+                <label for="limite">Digite o limite da tabuada (opcional):</label>
+                <input type="number" id="limite" name="limite">
+            </p>
+
+            <p>Resultado: <span id="resultado-exerc03"></span></p>
+
+            <button onclick="mostrarTabuada()">Executar tabuada</button>
+        </section>
+
+        <!-- Exercício 4-->
+        <section class="exercicio">
+            <h2>Exercício 4 - Soma de Array</h2>
+            <p>Escreva uma função chamada somaArray que receba um array de números e retorne a soma de todos os elementos.</p>
+            <p><b>Desafio adicional: </b> Crie uma versão da função que aceite um segundo parâmetro para multiplicar cada número antes de somar.</p>
+            <p>
+                <label for="sequencia">Digite uma sequência de números: </label>
+                <input type="string" placeholder="Ex.: 1 2 3 4 5" id="sequencia" name="sequencia">
+            </p>
+            <p>
+                <label for="multiplicador">Digite um núnero para multiplicar o array: </label>
+                <input type="number" id="multiplicador" name="multiplicador">
+            </p>
+
+            <p>Resultado: <span id="resultado-exerc04"></span></p>
+
+            <button onclick="somarArray(document.getElementById('sequencia').value, document.getElementById('multiplicador').value)">Executar somaArray e multiplicaArray</button>
+        </section>
+
+        <!-- Exercício 5-->
+        <section class="exercicio">
+            <h2>Exercício 5 - Manipulação de Strings</h2>
+            <p> Desenvolva uma função chamada reverterString que receba uma string e retorne a string invertida.</p>
+            <p><b>Desafio adicional: </b> Faça uma função que também remova espaços em branco no início e no fim da string antes de reverter.</p>
+            <p>
+                <label for="stringQualquer">Digite uma string qualquer: </label>
+                <input type="string" placeholder="Ex.: String Qualquer" id="stringQualquer" name="stringQualquer">
+            </p>
+
+            <p>Resultado: <span id="resultado-exerc05"></span></p>
+
+            <button onclick="reverterString(document.getElementById('stringQualquer').value)">Executar reverterString</button>
+        </section>
+
+        <!-- Exercício 6-->
+        <section class="exercicio">
+            <h2>Exercício 6 - Objetos e Arrays</h2>
+            <p> Desenvolva uma função chamada reverterString que receba uma string e retorne a string invertida.</p>
+            <p><b>Desafio adicional: </b> Adicione uma função que permita atualizar a idade e a cidade da pessoa.</p>
+            <p>
+                <label for="nome">Digite um nome: </label>
+                <input type="string" placeholder="Ex.: Maria" id="nome" name="nome">
+            </p>
+            <p>
+                <label for="idadePessoa">Digite a idade: </label>
+                <input type="number" placeholder="Ex.: 20" id="idadePessoa" name="idadePessoa">
+            </p>
+            <p>
+                <label for="nome">Digite a cidade: </label>
+                <input type="string" placeholder="Ex.: Suzano" id="cidade" name="cidade">
+            </p>
+
+            <p>Dados da pessoa: <span id="resultado-exerc06"></span></p>
+
+            <button onclick="descreverPessoa(document.getElementById('nome').value, document.getElementById('idadePessoa').value, document.getElementById('cidade').value)">Executar descreverPessoa</button>
+
+            <hr>
+
+            <p>Atualize os dados:</p>
+            <p>
+                <label for="novaIdade">Nova idade: </label>
+                <input type="number" id="novaIdade" name="novaIdade">
+            </p>
+            <p>
+                <label for="novaCidade">Nova cidade: </label>
+                <input type="string" id="novaCidade" name="novaCidade">
+            </p>
+
+            <button onclick="atualizarPessoa(document.getElementById('novaIdade').value, document.getElementById('novaCidade').value)">Executar descreverPessoa</button>
+
+        </section>
+
+        <!-- Exercício 7-->
+        <section class="exercicio">
+            <h2>Exercício 7 - Métodos de Array</h2>
+            <p> Implemente uma função chamada filtrarPares que receba um array de números e retorne um novo array contendo apenas os números pares.</p>
+            <p><b>Desafio adicional: </b> Adicione uma função para retornar os números ímpares também.</p>
+            <p>
+                <label for="sequenciaDeNumeros">Digite uma sequência de números: </label>
+                <input type="string" placeholder="Ex.: 1 2 3 4 5" id="sequenciaDeNumeros" name="sequenciaDeNumeros">
+            </p>
+
+            <p>Resultado: <span id="resultado-exerc07"></span></p>
+
+            <button onclick="filtrarPares(document.getElementById('sequenciaDeNumeros').value)">Executar filtrarPares</button>
+            <button onclick="filtrarImpares(document.getElementById('sequenciaDeNumeros').value)">Executar filtrarImpares</button>
+        </section>
+
+        <!-- Exercício 8-->
+        <section class="exercicio">
+            <h2>Exercício 8 - Manipulação de Strings</h2>
+            <p>Crie uma função chamada adicionarPropriedade que adicione uma nova propriedade a um objeto existente e retorne o objeto atualizado.</p>
+            <p><b>Desafio adicional: </b>Adicione uma verificação para garantir que a propriedade não existe antes de adicioná-la.</p>
+            <p>
+                <label for="novaPropriedade">Nova Propriedade: </label>
+                <input type="string" placeholder="Ex.: nacionalidade" id="novaPropriedade" name="novaPropriedade">
+            </p>
+            <p>
+                <label for="valorNovaPropriedade">Valor da propriedade: </label>
+                <input type="string" placeholder="Ex.: americano" id="valorNovaPropriedade" name="valorNovaPropriedade">
+            </p>
+            <p>Resultado: <span id="resultado-exerc08"></span></p>
+            <button onclick="adicionarPropriedade(document.getElementById('novaPropriedade').value, document.getElementById('valorNovaPropriedade').value)">Executar adicionarPropriedade</button>
+        </section>
+
+        <!-- Exercício 9-->
+        <section class="exercicio">
+            <h2>Exercício 9 - Eventos e DOM</h2>
+            <p>Crie uma página HTML com um botão. Escreva um script JavaScript que altere o texto de um parágrafo quando o botão for clicado.</p>
+            <p><b>Desafio adicional: </b>Adicione um contador que mostre quantas vezes o botão foi clicado.</p>
+            <p>CLIQUE O BOTÃO! </p>
+            <p id="resultado-exerc09">Olhe o que acontece aqui!</p>
+            <button id="btn" onclick="alterarParagrafo()">Executar adicionarPropriedade</button>
+        </section>
+
+        <!-- Exercício 10-->
+        <section class="exercicio">
+            <h2>Exercício 10 - Promises e Async/Await</h2>
+            <p>Desenvolva uma função chamada simularFetch que retorna uma promise resolvida após um atraso de 2 segundos com uma mensagem "Dados recebidos". Use async/await para consumir essa promise e exiba a mensagem no console.</p>
+            <p><b>Desafio adicional: </b>Adicione tratamento de erro com um bloco try/catch.</p>
+            <p>Resultado: verifique no Console!<span id="resultado-exerc10"></span></p>
+            <button onclick="consumirFetch()">Executar simularFetch</button>
+        </section>
+
+        <!-- Arquivo .js -->
+        <script src="functions.js"></script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024</p>
+        <img src="primogem.webp" alt="Primogem" class="imagem-primogem">
+    </footer>
+</body>
+</html>
